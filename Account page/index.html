@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account | PannSine</title>
+  <!-- <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+    rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../nav-bar.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header remains exactly as you provided -->
+  <header class="luxury-header">
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="logo">
+        <span class="logo-main">Pann</span><span class="logo-accent">Sine</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="../Home page/home.html" class="nav-link">Home</a></li>
+
+          <!-- In both desktop and mobile nav -->
+          <li>
+            <a href="../Shopping page/shopping.html" class="nav-link" id="collectionLink"
+              data-scroll-target="products-section" data-scroll-delay="5000">
+              Collection
+            </a>
+          </li>
+
+          <li><a href="../Customize Page/customize.html" class="nav-link">Customization</a></li>
+
+          <li class="nav-cart">
+            <a href="../checkOut/index.html" class="nav-link">
+              Cart <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="../Account page/index.html" class="nav-link">Account</a></li>
+          <li><a href="../Home page/home.html#footer" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" aria-label="Menu" id="mobileMenuBtn" aria-expanded="false">
+        <span class="hamburger">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav-container">
+        <ul>
+          <li><a href="../Home page/home.html" class="nav-link">Home</a></li>
+          <li><a href="../Shopping page/shopping.html#carousel-section" class="nav-link"
+              id="mobileCollectionLink">Collection</a></li>
+          <li><a href="../Customize Page/customize.html" class="nav-link">Customization</a></li>
+
+          <li>
+            <a href="../checkOut/index.html" class="nav-link">
+              Cart <span class="cart-count" id="mobile-cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="../Account page/index.html" class="nav-link">Account</a></li>
+          <li><a href="" class="nav-cta">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+  </header>
+
+  <div class="sidebar">
+    <button class="nav-btn active" onclick="showSection('account')">
+      <i class="fas fa-user"></i> Account
+    </button>
+    <button class="nav-btn" onclick="showSection('orders')">
+      <i class="fas fa-shopping-bag"></i> Orders
+    </button>
+    <button class="nav-btn" onclick="showLogoutPopup()">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </button>
+  </div>
+
+  <div class="content">
+    <!-- Account Section -->
+    <div id="account" class="section active">
+      <div class="user-info">
+        <img
+          src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+          alt="User Avatar" class="user-avatar">
+        <div class="info-row">
+          <div class="info-label">Full Name</div>
+          <div class="info-value">Heather</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Email Address</div>
+          <div class="info-value">heatjer123@gmail.com</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Phone Number</div>
+          <div class="info-value">+95 9797328398</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Shipping Address</div>
+          <div class="info-value">
+            1234 Rose Street<br>
+            Dagon Township<br>
+            Yangon<br>
+            Myanmar
+          </div>
+        </div>
+        <div class="info-row" style="border-bottom: none;">
+          <div class="info-label">Member Since</div>
+          <div class="info-value">January 15, 2024</div>
+        </div>
+        <a href="#" class="classic-button" data-animate="fade-up" data-delay="0.6">Edit Profile</a>
+      </div>
+    </div>
+
+    <!-- Orders Section -->
+    <div id="orders" class="section">
+      <h2>Your Orders</h2>
+      <div class="orders">
+        <div class="order-tile">
+          <img
+            src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            alt="Rose Bouquet">
+          <div class="order-details">
+            <h3>Eternal Rose Collection</h3>
+            <div class="order-meta">
+              <span>Order #FL-78945</span>
+              <span>May 15, 2025</span>
+            </div>
+            <div class="order-meta">
+              <span>12,000</span>
+              <span class="order-status status-confirmed">Confirmed</span>
+            </div>
+          </div>
+        </div>
+        <div class="order-tile">
+          <img
+            src="https://images.unsplash.com/photo-1526397751294-331021109fbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            alt="Tulip Set">
+          <div class="order-details">
+            <h3>Spring Tulip Symphony</h3>
+            <div class="order-meta">
+              <span>Order #FL-78231</span>
+              <span>May 5, 2025</span>
+            </div>
+            <div class="order-meta">
+              <span>17,000</span>
+              <span class="order-status status-delivered">Delivered</span>
+            </div>
+          </div>
+        </div>
+        <div class="order-tile">
+          <img
+            src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            alt="Orchid Arrangement">
+          <div class="order-details">
+            <h3>Exotic Orchid Elegance</h3>
+            <div class="order-meta">
+              <span>Order #FL-77654</span>
+              <span>April 28, 2025</span>
+            </div>
+            <div class="order-meta">
+              <span>65,000</span>
+              <span class="order-status status-pending">Pending</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  <!-- Logout Popup -->
+  <div id="logout-popup">
+    <div class="popup-content">
+      <p>Are you sure you want to logout from your account?</p>
+      <div class="popup-buttons">
+        <button class="popup-confirm" onclick="confirmLogout()">Yes, Logout</button>
+        <button class="popup-cancel" onclick="cancelLogout()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../nav-bar.js"></script>
+  <script src="index.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="customize.css">
+    <title></title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <section>
+        <div class="intro-text">
+            <h2>Create Your Own Bouquet</h2>
+            <p>Design a bouquet that's as unique as your message. Choose your favourite flowers, bouquet, and extras to
+                create the perfect arrangement for any occasion. Whether it’s love, gratitude, or celebration. Just you
+                decide how it blooms!</p>
+        </div>
+        <div class="customize">
+            <div class="customize-section">
+                <div class="choose">
+                    <div class="heading-with-clear-btn">
+                        <h2>Select Your Flowers Combo</h2>
+                        <button id="clear-all-btn" class="clear-btn">Clear All</button>
+                    </div>
+                    <p>You can choose up to 10 flowers to beautifully combine</p>
+                    <div class="grid-box" id="flower-combo">
+
+                        <div class="item" data-name="Red Rose" data-price="3000">
+                            <div class="box"><img src="images/red-rose.jpg" alt="Red Rose"></div>
+                            <p class="label">Red Rose</p>
+                        </div>
+                        <div class="item" data-name="White Rose" data-price="3000">
+                            <div class="box"><img src="images/white-rose.jpg" alt="Red Rose"></div>
+                            <p class="label">White Rose</p>
+                        </div>
+                        <div class="item" data-name="Yellow Rose" data-price="3000">
+                            <div class="box"><img src="images/yellow-rose.jpg" alt="Red Rose"></div>
+                            <p class="label">Yellow Rose</p>
+                        </div>
+                        <div class="item" data-name="Pink Rose" data-price="3000">
+                            <div class="box"><img src="images/pink-rose.jpg" alt="Red Rose"></div>
+                            <p class="label">Pink Rose</p>
+                        </div>
+                        <div class="item" data-name="Yellow Tulip" data-price="1000">
+                            <div class="box"><img src="images/yellow-tulip.jpg" alt="Red Rose"></div>
+                            <p class="label">Yellow Tulip</p>
+                        </div>
+                        <div class="item" data-name="White Tulip" data-price="1000">
+                            <div class="box"><img src="images/white-tulip.jpg" alt="Red Rose"></div>
+                            <p class="label">White Tulip</p>
+                        </div>
+                        <div class="item" data-name="Carnation" data-price="4000">
+                            <div class="box"><img src="images/carnation.jpg" alt="Red Rose"></div>
+                            <p class="label">Carnation</p>
+                        </div>
+                        <div class="item" data-name="Orchid" data-price="3500">
+                            <div class="box"><img src="images/orchid.jpg" alt="Red Rose"></div>
+                            <p class="label">Orchid</p>
+                        </div>
+                        <div class="item" data-name="Baby's Breath" data-price="800">
+                            <div class="box"><img src="images/baby'sbreath.jpg" alt="Red Rose"></div>
+                            <p class="label">Baby's Breath</p>
+                        </div>
+                        <div class="item" data-name="Hydrangeas" data-price="4000">
+                            <div class="box"><img src="images/hydrangeas.jpg" alt="Red Rose"></div>
+                            <p class="label">Hydrangeas</p>
+                        </div>
+                        <div class="item" data-name="Peonies" data-price="3700">
+                            <div class="box"><img src="images/peonies.jpg" alt="Red Rose"></div>
+                            <p class="label">Peonies</p>
+                        </div>
+                        <div class="item" data-name="Anemones" data-price="5000">
+                            <div class="box"><img src="images/anemones.jpg" alt="Red Rose"></div>
+                            <p class="label">Anemones</p>
+                        </div>
+                        <div class="item" data-name="Daisy" data-price="4500">
+                            <div class="box"><img src="images/daisy.avif" alt="Red Rose"></div>
+                            <p class="label">Anemones</p>
+                        </div>
+                        <div class="item" data-name="Drumstick Flower" data-price="7000">
+                            <div class="box"><img src="images/drumstick-flower.jpeg" alt="Red Rose"></div>
+                            <p class="label">Drumstick Flower</p>
+                        </div>
+                        <div class="item" data-name="Sunflower" data-price="8000">
+                            <div class="box"><img src="images/sunflower.webp" alt="Red Rose"></div>
+                            <p class="label">Sunflower</p>
+                        </div>
+                        <div class="item" data-name="Lily" data-price="6000">
+                            <div class="box"><img src="images/lily.jpeg" alt="Red Rose"></div>
+                            <p class="label">Lily</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="choose">
+                    <h2>Choose Your Wrapper</h2>
+                    <div class="grid-box" id="bouquet-style">
+                        <div class="item" data-name="Plastic" data-price="8000">
+                            <div class="box"><img src="images/plastic.jpeg" alt="Plastic"></div>
+                            <p class="label">Plastic</p>
+                        </div>
+                        <div class="item" data-name="Kraft Paper" data-price="6000">
+                            <div class="box"><img src="images/kraft-paper.jpeg" alt="kraft-paper"></div>
+                            <p class="label">Kraft Paper</p>
+                        </div>
+                        <div class="item" data-name="Tissue Paper" data-price="5000">
+                            <div class="box"><img src="images/tissue-paper.jpeg" alt="Red Rose"></div>
+                            <p class="label">Tissue Paper</p>
+                        </div>
+                        <div class="item" data-name="Non-woven" data-price="10000">
+                            <div class="box"><img src="images/non-woven-wrapping.avif" alt="Red Rose"></div>
+                            <p class="label">Non-woven</p>
+                        </div>
+                        <div class="item" data-name="Burlap" data-price="8000">
+                            <div class="box"><img src="images/burlap-wrap.jpeg" alt="Red Rose"></div>
+                            <p class="label">Burlap</p>
+                        </div>
+                        <div class="item" data-name="Silk Fabric" data-price="12000">
+                            <div class="box"><img src="images/slik-fabric.jpeg" alt="Red Rose"></div>
+                            <p class="label">Silk Fabric</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose">
+                    <h2>Choose Bouquet Color</h2>
+                    <div class="grid-box" id="bouquet-color">
+                        <div class="item" data-name="Red" data-price="1000">
+                            <div class="box color-box" style="background-color: #C41E3A;"></div>
+                            <p class="label">Red</p>
+                        </div>
+                        <div class="item" data-name="Yellow" data-price="1000">
+                            <div class="box color-box" style="background-color: #FFD700;"></div>
+                            <p class="label">Yellow</p>
+                        </div>
+                        <div class="item" data-name="Soft Pink" data-price="1000">
+                            <div class="box color-box" style="background-color: #FADADD;"></div>
+                            <p class="label">Soft Pink</p>
+                        </div>
+                        <div class="item" data-name="Blush Rose" data-price="2000">
+                            <div class="box color-box" style="background-color: #F4C2C2;"></div>
+                            <p class="label">Blush Rose</p>
+                        </div>
+                        <div class="item" data-name="Light Peach" data-price="2000">
+                            <div class="box color-box" style="background-color: #FFE5B4;"></div>
+                            <p class="label">Light Peach</p>
+                        </div>
+                        <div class="item" data-name="White" data-price="1000">
+                            <div class="box color-box" style="background-color: #ffffff;"></div>
+                            <p class="label">White</p>
+                        </div>
+                        <div class="item" data-name="Lavendar" data-price="1000">
+                            <div class="box color-box" style="background-color: #E6E6FA;"></div>
+                            <p class="label">Lavendar</p>
+                        </div>
+                        <div class="item" data-name="Blue" data-price="2000">
+                            <div class="box color-box" style="background-color: #ADD8E6;"></div>
+                            <p class="label">Blue</p>
+                        </div>
+                        <div class="item" data-name="Cream" data-price="2000">
+                            <div class="box color-box" style="background-color: #FFF8DC;"></div>
+                            <p class="label">Cream</p>
+                        </div>
+                        <div class="item" data-name="Green" data-price="2000">
+                            <div class="box color-box" style="background-color: #8FBC8F;"></div>
+                            <p class="label">Green</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose">
+                    <h2>Choose Ribbon Color</h2>
+                    <div class="grid-box" id="ribbon-color">
+                        <div class="item" data-name="Baby Pink" data-price="0">
+                            <div class="box color-box" style="background-color: #FFC0CB;"></div>
+                            <p class="label">Baby Pink</p>
+                        </div>
+                        <div class="item" data-name="Champagne" data-price="0">
+                            <div class="box color-box" style="background-color: #F7E7CE;"></div>
+                            <p class="label">Champagne</p>
+                        </div>
+                        <div class="item" data-name="Rose Gold" data-price="0">
+                            <div class="box color-box" style="background-color: #B76E79;"></div>
+                            <p class="label">Rose Gold</p>
+                        </div>
+                        <div class="item" data-name="Sage Green" data-price="0">
+                            <div class="box color-box" style="background-color: #B2AC88;"></div>
+                            <p class="label">Sage Green</p>
+                        </div>
+                        <div class="item" data-name="Navy Blue" data-price="0">
+                            <div class="box color-box" style="background-color: #000080;"></div>
+                            <p class="label">Navy Blue</p>
+                        </div>
+                        <div class="item" data-name="White" data-price="0">
+                            <div class="box color-box" style="background-color: #ffffff;"></div>
+                            <p class="label">White</p>
+                        </div>
+                        <div class="item" data-name="Gold" data-price="0">
+                            <div class="box color-box" style="background-color: #FFD700;"></div>
+                            <p class="label">Gold</p>
+                        </div>
+                        <div class="item" data-name="Silver" data-price="0">
+                            <div class="box color-box" style="background-color: #C0C0C0;"></div>
+                            <p class="label">Silver</p>
+                        </div>
+                        <div class="item" data-name="Red" data-price="0">
+                            <div class="box color-box" style="background-color: #800020;"></div>
+                            <p class="label">Red</p>
+                        </div>
+                        <div class="item" data-name="Green" data-price="0">
+                            <div class="box color-box" style="background-color: #8FBC8F;"></div>
+                            <p class="label">Green</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose">
+                    <div class="request-box">
+                        <h2>Anymore Request for Your Bouquet?</h2>
+                        <p>You can write down any requests for your Bouquet such as decoration, gift card & letters,
+                            etc….
+                        </p>
+                        <textarea rows="4" placeholder="Write your request here..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="calculate-section">
+                <div class="preview-box">
+                    <h3>Summary</h3>
+                    <div id="summary-list" class="summary-list"></div>
+                    <p class="total-line">
+                        <strong>Estimated Total:</strong>
+                        <span id="price-total">0.00</span>
+                    </p>
+                </div>
+                <div class="buttons">
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">Check Out</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="customize.js"></script>
+</body>
+
+</html>

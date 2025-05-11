@@ -1,0 +1,66 @@
+/* font-awesome-utils.css */
+/* Reusable Font Awesome icon styles for your luxury floral site */
+
+/* Icon base styles */
+.fa-icon {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    margin-right: 0.3rem;
+  }
+  
+  /* Gold accent icons */
+  .fa-icon-gold {
+    color: #d4af37;
+  }
+  
+  /* White icons */
+  .fa-icon-white {
+    color: white;
+  }
+  
+  /* Taupe/Muted icons */
+  .fa-icon-taupe {
+    color: #7a6a5f;
+  }
+  
+  /* Hover effects */
+  .fa-icon-hover-grow:hover {
+    transform: scale(1.1);
+  }
+  
+  .fa-icon-hover-lift:hover {
+    transform: translateY(-2px);
+  }
+  
+  .fa-icon-hover-gold:hover {
+    color: #d4af37;
+  }
+  
+  /* Specific icon sizes */
+  .fa-icon-sm {
+    font-size: 0.8rem;
+  }
+  
+  .fa-icon-md {
+    font-size: 1rem;
+  }
+  
+  .fa-icon-lg {
+    font-size: 1.2rem;
+  }
+  
+  .fa-icon-xl {
+    font-size: 1.5rem;
+  }
+  
+  /* Icon buttons */
+  .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .icon-btn .fa-icon {
+    margin-right: 0;
+  }

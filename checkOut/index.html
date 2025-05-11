@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paann Sine - Checkout</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+   
+<link rel="stylesheet" href="../nav-bar.css">
+<link rel="stylesheet" href="../footer.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="luxury-header">
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="logo">
+        <span class="logo-main">Pann</span><span class="logo-accent">Sine</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="../Home page/home.html" class="nav-link">Home</a></li>
+
+          <!-- In both desktop and mobile nav -->
+          <li>
+            <a href="../Shopping page/shopping.html" class="nav-link" id="collectionLink"
+              data-scroll-target="products-section" data-scroll-delay="5000">
+              Collection
+            </a>
+          </li>
+
+          <li><a href="../Customize Page/customize.html" class="nav-link">Customization</a></li>
+
+          <li class="nav-cart">
+            <a href="../checkOut/index.html" class="nav-link">
+              Cart <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="../Account page/index.html" class="nav-link">Account</a></li>
+          <li><a href="#footer" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" aria-label="Menu" id="mobileMenuBtn" aria-expanded="false">
+        <span class="hamburger">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav-container">
+        <ul>
+          <li><a href="../Home page/home.html" class="nav-link">Home</a></li>
+          <li><a href="../Shopping page/shopping.html#carousel-section" class="nav-link"
+              id="mobileCollectionLink">Collection</a></li>
+              <li><a href="../Customize Page/customize.html" class="nav-link">Customization</a></li>
+
+          <li>
+            <a href="../checkOut/index.html" class="nav-link">
+              Cart <span class="cart-count" id="mobile-cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="../Account page/index.html" class="nav-link">Account</a></li>
+          <li><a href="#footer" class="nav-cta">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+  </header>
+    <main>
+        <!-- Cart Section -->
+        <section class="cart-section">
+            <div class="cart-header">
+                <h2>My Cart</h2>
+                <a href="../Shopping page/shopping.html#products-section" class="continue-shopping">Continue shopping &gt;</a>
+            </div>
+            <hr style="width:100%;text-align:left;margin-left:0">
+            <br>
+            <div class="cart-items">
+                <!-- Cart Item 1 -->
+                <div class="cart-item">
+                    <div class="cart-item-img"><img src="images/tulip-flowers.webp" alt="Tulip Flowers"></div>
+                    <div class="cart-item-details">
+                        <div class="cart-item-name">Tulip Flowers</div>
+                        <div class="cart-item-price price">40000.00</div>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button class="minus">-</button>
+                        <span class="number price">1</span>
+                        <button class="plus">+</button>
+                        <span class="cart-item-remove"><i class="ri-delete-bin-fill"></i></span>
+                    </div>
+                </div>
+                <!-- Cart Item 2 -->
+                <div class="cart-item">
+                    <div class="cart-item-img"><img src="images/red-roses.jpeg" alt="Red Roses"></div>
+                    <div class="cart-item-details">
+                        <div class="cart-item-name">Red Roses</div>
+                        <div class="cart-item-price price">30000.00</div>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button class="minus">-</button>
+                        <span class="number price">1</span>
+                        <button class="plus">+</button>
+                        <span class="cart-item-remove"><i class="ri-delete-bin-fill"></i></span>
+                    </div>
+                </div>
+                <!-- Cart Item 3 -->
+                <div class="cart-item">
+                    <div class="cart-item-img"><img src="images/lilies_main.png" alt="Lilies"></div>
+                    <div class="cart-item-details">
+                        <div class="cart-item-name">Lilies</div>
+                        <div class="cart-item-price price">8000.00</div>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button class="minus">-</button>
+                        <span class="number price">1</span>
+                        <button class="plus">+</button>
+                        <span class="cart-item-remove"><i class="ri-delete-bin-fill"></i></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Discount Code -->
+            <div class="cart-summary">
+                <label for="discount">Discount Code</label>
+                <input type="text" id="discount" placeholder="Enter code" class="entercode">
+                <button class="apply-btn">Apply</button>
+            </div>
+            <!-- Totals and Delivery -->
+            <div class="cart-totals">
+                <div class="subtotal-row">
+                    <span>Subtotal:</span>
+                    <span class="price">78000.00</span>
+                </div>
+
+                <hr style="width:100%;text-align:left;margin-left:0">
+
+                <div class="subtotal-row">
+                    <span>Shipping:</span>
+                    <span>Shipping to <span id="selectedTownship">Sanchaung</span>, Yangon</span>
+                </div>
+
+                <!-- change address button -->
+                <div class="address-wrapper">
+                    <a href="#" class="address" id="changeAddressBtn">Change Address</a>
+                    <div class="address-select-container hidden" id="addressSelectBox">
+                        <input type="text" id="townshipSearch" placeholder="Search Township..." />
+                        <ul id="townshipList">
+                            <li>Sanchaung</li>
+                            <li>Kamayut</li>
+                            <li>Hlaing</li>
+                            <li>Mayangone</li>
+                            <li>Bahan</li>
+                            <li>Dagon</li>
+                            <li>South Okkalapa</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr style="width:100%;text-align:left;margin-left:0">
+
+             <!-- Delivery Options Section -->
+<div class="subtotal-row delivery-options">
+    <span><label for="delivery-type">Delivery Type:</label></span>
+    <span class="delivery-inputs">
+        <div class="delivery-option">
+            <input type="radio" id="deliver-today" name="delivery" value="today" checked>
+            <label for="deliver-today">Deliver Today</label>
+        </div>
+        <div class="delivery-option">
+            <input type="radio" id="pick-up" name="delivery" value="pickup">
+            <label for="pick-up">Pick-up</label>
+        </div>
+        <div class="delivery-option">
+            <input type="radio" id="schedule" name="delivery" value="schedule">
+            <label for="schedule">Schedule</label>
+        </div>
+    </span>
+</div>
+
+<!-- Date Picker Section (Hidden by default) -->
+<div id="schedule-date-container" class="schedule-date-container hidden">
+    <div class="date-selection">
+        <label for="scheduled-date">Select Delivery Date:</label>
+        <input type="date" id="scheduled-date" min="">
+    </div>
+    <div id="selected-date-display" class="selected-date-display hidden">
+        <i class="ri-calendar-line"></i> Scheduled for: <span id="display-date"></span>
+    </div>
+</div>
+
+                <hr style="width:100%; text-align:left; margin-left:0">
+                <div class="subtotal-row">
+                    <span>Delivery Fees: </span>
+                    <span class="price"> 4000</span>
+                </div>
+                <hr style="width:100%; text-align:left ;margin-left:0">
+                <div style="font-weight:bold;" class="subtotal-row">
+                    <span>Total:</span>
+                    <span class="price">82000.00</span>
+                </div>
+            </div>
+            <!-- Notes -->
+            <div class="cart-notes">
+                <label for="shop-notes">Notes to the shop</label>
+                <textarea id="shop-notes"></textarea>
+                <label for="recipient-message">Personal Message for Recipient</label>
+                <textarea id="recipient-message"></textarea>
+            </div>
+        </section>
+        <!-- Contact Information Section -->
+        <section class="contact-section">
+            <h3>Contact Information</h3>
+            <form class="contact-form">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" required>
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" required>
+                <label for="city">City <span class="required">*</span></label>
+                <input type="text" id="city" required>
+                <label for="address">Address <span class="required">*</span></label>
+                <input type="text" id="address" required>
+                <label for="phone">Phone <span class="required">*</span></label>
+                <input type="text" id="phone" required>
+                <label for="payment">Payment <span class="required">*</span></label>
+                <input type="text" id="payment" required>
+                <button type="submit" class="checkout-btn">Check out</button>
+            </form>
+        </section>
+    </main>
+    
+</body>
+<footer class="luxury-footer" id="footer">
+    <div class="footer-container">
+      <!-- Column 1: Contact Info -->
+      <div class="footer-contact" data-animate="fade-up">
+        <h3 class="footer-heading">Blossom With Us</h3>
+        
+        <div class="contact-item">
+            <i class="fas fa-envelope footer-icon"></i>
+          <a href="mailto:hello@yourflorist.com">info.@pannsine.com</a>
+        </div>
+        
+        <div class="contact-item">
+            <i class="fas fa-map-marker-alt footer-icon"></i>
+          <div>
+            <p>123 Thiri Street, Sanchaung</p>
+            <p>Yangon, yg Myanmar</p>
+            <button class="map-link" id="mapTrigger">See location ↗</button>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <svg class="footer-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:+11234567890">+95 9837273833</a>
+        </div>
+        
+        <div class="contact-item">
+            <i class="far fa-clock footer-icon"></i>
+            <p>Monday - Friday<br>8:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+      
+      <!-- Column 2: Newsletter -->
+      <div class="footer-newsletter" data-animate="fade-up" data-delay="0.2">
+        <h3 class="footer-heading">Subscribe to Our Newsletter</h3>
+        <p class="newsletter-desc">Receive exclusive floral inspirations, seasonal offers, and VIP event invitations.</p>
+        
+        <form class="newsletter-form">
+          <div class="input-group">
+            <input type="email" placeholder="Your email address" required>
+            <div class="underline"></div>
+          </div>
+          <button type="submit" class="newsletter-button">
+            Subscribe
+            <svg width="20" viewBox="0 0 24 24"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+          </button>
+        </form>
+        
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 16a4 4 0 100-8 4 4 0 000 8z"/><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="18" cy="6" r="1"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 17a5 5 0 100-10 5 5 0 000 10z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15l-1.79 1.79A6.985 6.985 0 0012 19c.68 0 1.34-.1 1.96-.29L11 19.93z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Map Modal (Hidden by default) -->
+    <div class="map-modal" id="mapModal">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238.7181993061653!2d96.12819856271648!3d16.80197142066733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb3ee7829a9f%3A0xfc86ef6f8614338!2sThiri%20St%2C%20Yangon!5e0!3m2!1sen!2smm!4v1746769416512!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>&copy; 2023 PannSine. Handcrafted with <span class="heart">♥</span></p>
+    </div>
+  </footer>
+  <script src="../footer.js" ></script>
+  <script src="../nav-bar.js" ></script>
+<script src="script.js"></script>
+</html>

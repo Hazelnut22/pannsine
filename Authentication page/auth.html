@@ -1,0 +1,214 @@
+√<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account | PannSine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../nav-bar.css">
+  <link rel="stylesheet" href="auth.css">
+
+</head>
+<body>
+  <header class="luxury-header">
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="logo">
+        <span class="logo-main">Pann</span><span class="logo-accent">Sine</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="../Home page/home.html" class="nav-link">Home</a></li>
+
+          <!-- In both desktop and mobile nav -->
+          <li>
+            <a href="../Shopping page/shopping.html" class="nav-link" id="collectionLink"
+              data-scroll-target="products-section" data-scroll-delay="5000">
+              Collection
+            </a>
+          </li>
+
+          <li><a href="../Customize Page/customize.html" class="nav-link">Customization</a></li>
+
+          <li class="nav-cart">
+            <a href="../checkOut/index.html" class="nav-link">
+              Cart <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="../Account page/index.html" class="nav-link">Account</a></li>
+          <li><a href="#" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" aria-label="Menu" id="mobileMenuBtn" aria-expanded="false">
+        <span class="hamburger">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav-container">
+        <ul>
+          <li><a href="../Home page/home.html" class="nav-link">Home</a></li>
+          <li><a href="../Shopping page/shopping.html#carousel-section" class="nav-link"
+              id="mobileCollectionLink">Collection</a></li>
+              <li><a href="../Customize Page/customize.html" class="nav-link">Customization</a></li>
+
+          <li>
+            <a href="../checkOut/index.html" class="nav-link">
+              Cart <span class="cart-count" id="mobile-cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="../Account page/index.html" class="nav-link">Account</a></li>
+          <li><a href="" class="nav-cta">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+  </header>
+
+  <div class="sidebar">
+    <button class="nav-btn active" onclick="showSection('account')">
+      <i class="fas fa-user"></i> Account
+    </button>
+    <button class="nav-btn" onclick="showSection('orders')">
+      <i class="fas fa-shopping-bag"></i> Orders
+    </button>
+  
+  </div>
+
+  <div class="content">
+    <!-- Account Section -->
+    <div id="account" class="section active">
+      <div class="auth-container">
+        <!-- Toggle Switch -->
+        <div class="auth-toggle">
+          <div class="toggle-bg"></div>
+          <button class="toggle-btn active" id="loginToggle">Sign In</button>
+          <button class="toggle-btn" id="registerToggle">Create Account</button>
+        </div>
+        
+        <!-- Floral Animation -->
+        <div class="floral-transition">
+          <div class="bloom-circle"></div>
+          <div class="floral-pattern">
+            <div class="stem"></div>
+            <div class="leaf leaf-1"></div>
+            <div class="leaf leaf-2"></div>
+          </div>
+        </div>
+        
+        <!-- Forms Container -->
+        <div class="forms-wrapper">
+          <!-- Login Form -->
+          <form class="auth-form login-form active">
+            <div class="form-header">
+              <i class="fas fa-sign-in-alt"></i>
+              <h3>Welcome Back</h3>
+              <p>Sign in to access your floral haven</p>
+            </div>
+            
+            <div class="form-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="loginEmail" placeholder=" " >
+              <label for="loginEmail">Email Address</label>
+              <div class="underline"></div>
+            </div>
+            
+            <div class="form-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="loginPassword" placeholder=" " >
+              <label for="loginPassword">Password</label>
+              <div class="underline"></div>
+            </div>
+            
+            <button onclick="login()" type="submit" class="auth-submit">
+              <span>Sign In</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            
+            <div class="form-footer">
+              <p>Don't have an account? <a href="#" id="switchToRegister">Create one</a></p>
+            </div>
+          </form>
+          
+          <!-- Register Form -->
+          <form action="../Account%20page/index.html" class="auth-form register-form" >
+            <div class="form-header">
+              <i class="fas fa-user-plus"></i>
+              <h3>Begin Your Journey</h3>
+              <p>Create your floral sanctuary</p>
+            </div>
+            
+            <div class="form-group">
+              <i class="fas fa-user"></i>
+              <input type="text" id="registerName" placeholder=" " >
+              <label for="registerName">Full Name</label>
+              <div class="underline"></div>
+            </div>
+            
+            <div class="form-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="registerEmail" placeholder=" " >
+              <label for="registerEmail">Email Address</label>
+              <div class="underline"></div>
+            </div>
+            
+            <div class="form-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="registerPassword" placeholder=" " >
+              <label for="registerPassword">Password</label>
+              <div class="underline"></div>
+            </div>
+            
+            <button onclick="login()" type="submit" class="auth-submit">
+              <span>Register</span>
+              <i class="fas fa-arrow-right"></i>
+            </button> 
+    
+            
+            <div class="form-footer">
+              <p>Already have an account? <a href="#" id="switchToLogin">Sign in</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Orders Section -->
+    <div id="orders" class="section">
+
+      <div id="login-prompt" class="login-prompt-overlay">
+        <div class="login-prompt-container">
+          <div class="prompt-header">
+            <i class="fas fa-lock"></i>
+            <h3>Access Restricted</h3>
+          </div>
+          <div class="prompt-body">
+            <p>You need to be logged in to view this content.</p>
+            <div class="flower-decoration">
+              <i class="fas fa-spa"></i>
+              <i class="fas fa-leaf"></i>
+              <i class="fas fa-spa"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../nav-bar.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
