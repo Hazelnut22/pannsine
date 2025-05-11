@@ -227,7 +227,7 @@ body.menu-open {
 
 @media (max-width: 768px) {
   .luxury-header {
-    padding: 1rem 5%;
+    padding: 1rem 0.1rem;
   }
   
   .desktop-nav {

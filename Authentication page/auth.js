@@ -1,15 +1,15 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize the first section as active
+   
     document.getElementById('account').classList.add('active');
   });
   
   function showSection(id) {
-    // Get all sections and buttons
+   
     const sections = document.querySelectorAll('.section');
     const navButtons = document.querySelectorAll('.nav-btn');
     
-    // Remove active class from all buttons
+  
     navButtons.forEach(btn => {
       btn.classList.remove('active');
     });
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Show selected section with fade in animation after a slight delay
+    
     setTimeout(() => {
       const target = document.getElementById(id);
       target.classList.add('active');
@@ -128,16 +128,5 @@ document.addEventListener('DOMContentLoaded', function() {
     switchToRegister.addEventListener('click', (e) => {
       e.preventDefault();
       showForm('register');
-    });
-    
-    // Form submissions
-    loginForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      // Login logic
-    });
-    
-    registerForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      // Registration logic
     });
   });

@@ -11,7 +11,7 @@
 body {
   background-color: var(--light-bg);
   color: var(--text-dark);
-  margin-top: 10px;
+  margin-top: 100px;
 }
 
 /* Sidebar Styles */
@@ -106,40 +106,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .sidebar {
-    width: 240px;
-  }
-  .content {
-    margin-left: 240px;
-    padding: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    position: static;
-    padding: 1rem;
-    display: flex;
-    overflow-x: auto;
-    border-right: none;
-    border-bottom: 1px solid rgba(210, 195, 175, 0.3);
-  }
-  .nav-btn {
-    white-space: nowrap;
-    margin: 0 0.5rem;
-  }
-  .content {
-    margin-left: 0;
-    padding: 1.5rem;
-  }
-  .orders {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 
 
@@ -176,6 +142,7 @@ body {
   box-shadow: 0 15px 40px rgba(0,0,0,0.2);
   transform: translateY(0);
   animation: slideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  margin-top:50px;
 }
 
 .prompt-header {
@@ -205,6 +172,7 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
+
 }
 
 .flower-decoration {
@@ -344,7 +312,7 @@ body {
 /* Forms Wrapper */
 .forms-wrapper {
   position: relative;
-  height: 1000px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -604,14 +572,278 @@ body {
   transform: scale(1) rotate(45deg);
 }
 
-/* Responsive */
+
+
+
+
+/* ===== MOBILE RESPONSIVE AUTH PAGE ===== */
 @media (max-width: 768px) {
-  .auth-container {
-    margin: 1rem;
+  body {
+    margin-top: 150px;
+    padding-bottom: 20px;
   }
+
   
-  .forms-wrapper {
-    height: auto;
-    min-height: 400px;
+  .login-prompt-container {
+    margin-top:160px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-right: none;
+    border-bottom: 1px solid rgba(210, 195, 175, 0.3);
+    z-index: 999;
+    white-space: nowrap;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-btn {
+    width: auto;
+    min-width: 120px;
+    margin: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+
+  .nav-btn i {
+    margin-right: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 1rem;
+    margin-top: 120px;
+  }
+
+  .auth-container {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+
+  .auth-toggle {
+    margin: 1rem 0;
+    padding: 0.25rem;
+  }
+
+  .toggle-btn {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .form-header {
+    margin-bottom: 1.5rem;
+    padding-top: 0;
+  }
+
+  .form-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .form-header p {
+    font-size: 0.95rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group input {
+    padding: 0.9rem 0 0.9rem 2rem;
+    font-size: 1rem;
+  }
+
+  .auth-submit {
+    height: 45px;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .login-prompt-container {
+    width: 95%;
+  }
+}
+
+/* iPhone X and similar small devices (375px and below) */
+@media (max-width: 375px) {
+  body {
+    margin-top: 150px;
+    padding-bottom: 20px;
+  }
+
+  .sidebar {
+    top: 100px;
+    height: 54px;
+  }
+
+  .content {
+    margin-top: 110px;
+    padding: 0.8rem;
+  }
+
+  .auth-container {
+    padding: 0 0.8rem;
+  }
+
+  .nav-btn {
+    min-width: 110px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-btn i {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .toggle-btn {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .form-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .form-group input {
+    padding: 0.8rem 0 0.8rem 1.8rem;
+  }
+
+  .form-group i {
+    font-size: 0.9rem;
+    top: 0.9rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    top: 0.8rem;
+    left: 1.8rem;
+  }
+
+  .auth-submit {
+    height: 42px;
+    font-size: 0.95rem;
+  }
+
+  .prompt-header {
+    padding: 20px;
+  }
+
+  .prompt-header i {
+    font-size: 2rem;
+  }
+
+  .prompt-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .prompt-body {
+    padding: 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Very small devices (320px and below) */
+@media (max-width: 320px) {
+  body {
+    margin-top: 150px;
+    padding-bottom: 20px;
+  }
+
+  .content {
+    margin-top: 106px;
+  }
+
+  .nav-btn {
+    min-width: 100px;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .toggle-btn {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .form-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .auth-submit {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape mode adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    margin-top: 150px;
+    padding-bottom: 20px;
+  }
+  .sidebar {
+    position: absolute;
+    top: 60px;
+    height: 50px;
+  }
+
+  .content {
+    margin-top: 110px;
+  }
+
+  .auth-container {
+    max-width: 90%;
+    margin: 0.5rem auto;
+  }
+}
+
+/* Animation adjustments for mobile */
+@media (max-width: 768px) {
+  .floral-transition {
+    display: none; /* Disable complex animations on mobile */
+  }
+
+  .auth-form {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  .auth-form.leaving {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+}
+
+/* Form input label adjustments for mobile */
+@media (max-width: 768px) {
+  .form-group input:focus ~ label,
+  .form-group input:not(:placeholder-shown) ~ label {
+    transform: translateY(-1.2rem) translateX(1.8rem) scale(0.85);
+  }
+}
+
+/* Button hover effects removal for touch devices */
+@media (hover: none) {
+  .auth-submit:hover {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(122, 106, 95, 0.2);
+  }
+
+  .auth-submit:hover i {
+    transform: none;
   }
 }
