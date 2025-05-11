@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function login() {
     // Redirect to logout page or authentication page
-    window.location.href = "../Account page/index.html";
+    window.location.href = "../Account page/account.html";
   }
 
 
